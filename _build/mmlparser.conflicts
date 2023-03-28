@@ -1,0 +1,534 @@
+
+** Conflict (shift/reduce) in state 93.
+** Token involved: IDENT
+** This state is reached from program after reading:
+
+ACCG IDENT EG DEUXPT expression PTV
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+simple_expression 
+(?)
+
+** In state 93, looking ahead at IDENT, shifting is permitted
+** because of the following sub-derivation:
+
+ACCG struct_params list(struct_params) ACCD 
+     IDENT EG DEUXPT expression PTV 
+                     expression PTV expression 
+                                    simple_expression 
+                                    . IDENT 
+
+** In state 93, looking ahead at IDENT, reducing production
+** struct_params -> IDENT EG DEUXPT expression PTV
+** is permitted because of the following sub-derivation:
+
+ACCG struct_params list(struct_params) ACCD // lookahead token appears because list(struct_params) can begin with IDENT
+     IDENT EG DEUXPT expression PTV . 
+
+** Conflict (shift/reduce) in state 91.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+LET IDENT list(let_params) EG expression IN expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 91, looking ahead at UNIT, reducing production
+** expression -> LET IDENT list(let_params) EG expression IN expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+LET IDENT list(let_params) EG expression IN expression . 
+
+** In state 91, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+LET IDENT list(let_params) EG expression IN expression 
+                                            expression simple_expression 
+                                                       . UNIT 
+
+** Conflict (shift/reduce) in state 83.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+LET REC IDENT list(let_params) fun_typ EG expression IN expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 83, looking ahead at UNIT, reducing production
+** expression -> LET REC IDENT list(let_params) fun_typ EG expression IN expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+LET REC IDENT list(let_params) fun_typ EG expression IN expression . 
+
+** In state 83, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+LET REC IDENT list(let_params) fun_typ EG expression IN expression 
+                                                        expression simple_expression 
+                                                                   . UNIT 
+
+** Conflict (shift/reduce) in state 80.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+IF expression THEN expression ELSE expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 80, looking ahead at UNIT, reducing production
+** expression -> IF expression THEN expression ELSE expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+IF expression THEN expression ELSE expression . 
+
+** In state 80, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+IF expression THEN expression ELSE expression 
+                                   expression simple_expression 
+                                              . UNIT 
+
+** Conflict (shift/reduce) in state 78.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET ELSE EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+IF expression THEN expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 78, looking ahead at UNIT, reducing production
+** expression -> IF expression THEN expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+IF expression THEN expression . 
+
+** In state 78, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+IF expression THEN expression ELSE expression 
+                   expression simple_expression 
+                              . UNIT 
+
+** Conflict (shift/reduce) in state 75.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+FUN PARGAUCHE IDENT DEUXPT typ PARDROITE FLECHE expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 75, looking ahead at UNIT, reducing production
+** expression -> FUN PARGAUCHE IDENT DEUXPT typ PARDROITE FLECHE expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+FUN PARGAUCHE IDENT DEUXPT typ PARDROITE FLECHE expression . 
+
+** In state 75, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+FUN PARGAUCHE IDENT DEUXPT typ PARDROITE FLECHE expression 
+                                                expression simple_expression 
+                                                           . UNIT 
+
+** Conflict (shift/reduce) in state 74.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression EGAL expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 74, looking ahead at UNIT, reducing production
+** expression -> expression EGAL expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression EGAL expression . 
+
+** In state 74, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression EGAL expression 
+                expression simple_expression 
+                           . UNIT 
+
+** Conflict (shift/reduce) in state 72.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression ET expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 72, looking ahead at UNIT, reducing production
+** expression -> expression ET expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression ET expression . 
+
+** In state 72, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression ET expression 
+              expression simple_expression 
+                         . UNIT 
+
+** Conflict (shift/reduce) in state 70.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression INF expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 70, looking ahead at UNIT, reducing production
+** expression -> expression INF expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression INF expression . 
+
+** In state 70, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression INF expression 
+               expression simple_expression 
+                          . UNIT 
+
+** Conflict (shift/reduce) in state 67.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression DIV expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 67, looking ahead at UNIT, reducing production
+** expression -> expression DIV expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression DIV expression . 
+
+** In state 67, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression DIV expression 
+               expression simple_expression 
+                          . UNIT 
+
+** Conflict (shift/reduce) in state 65.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression INFS expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 65, looking ahead at UNIT, reducing production
+** expression -> expression INFS expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression INFS expression . 
+
+** In state 65, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression INFS expression 
+                expression simple_expression 
+                           . UNIT 
+
+** Conflict (shift/reduce) in state 63.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression MODULO expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 63, looking ahead at UNIT, reducing production
+** expression -> expression MODULO expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression MODULO expression . 
+
+** In state 63, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression MODULO expression 
+                  expression simple_expression 
+                             . UNIT 
+
+** Conflict (shift/reduce) in state 61.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression MOINS expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 61, looking ahead at UNIT, reducing production
+** expression -> expression MOINS expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression MOINS expression . 
+
+** In state 61, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression MOINS expression 
+                 expression simple_expression 
+                            . UNIT 
+
+** Conflict (shift/reduce) in state 59.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression OU expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 59, looking ahead at UNIT, reducing production
+** expression -> expression OU expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression OU expression . 
+
+** In state 59, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression OU expression 
+              expression simple_expression 
+                         . UNIT 
+
+** Conflict (shift/reduce) in state 57.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression NEGAL expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 57, looking ahead at UNIT, reducing production
+** expression -> expression NEGAL expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression NEGAL expression . 
+
+** In state 57, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression NEGAL expression 
+                 expression simple_expression 
+                            . UNIT 
+
+** Conflict (shift/reduce) in state 55.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression PLUS expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 55, looking ahead at UNIT, reducing production
+** expression -> expression PLUS expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression PLUS expression . 
+
+** In state 55, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression PLUS expression 
+                expression simple_expression 
+                           . UNIT 
+
+** Conflict (shift/reduce) in state 53.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression PTV expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 53, looking ahead at UNIT, reducing production
+** expression -> expression PTV expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression PTV expression . 
+
+** In state 53, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression PTV expression 
+               expression simple_expression 
+                          . UNIT 
+
+** Conflict (shift/reduce) in state 51.
+** Tokens involved: UNIT TRUE PTV NEGAL MOINS MODULO FALSE ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+expression STAR expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 51, looking ahead at UNIT, reducing production
+** expression -> expression STAR expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+expression STAR expression . 
+
+** In state 51, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expression STAR expression 
+                expression simple_expression 
+                           . UNIT 
+
+** Conflict (shift/reduce) in state 49.
+** Tokens involved: UNIT TRUE STAR PTV PLUS PARGAUCHE OU NEGAL MOINS MODULO INFS INF IDENT FALSE ET EGAL DIV CST ACCG
+** The following explanations concentrate on token UNIT.
+** This state is reached from program after reading:
+
+simple_expression PT IDENT FLECHEG expression
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+expression EOF 
+(?)
+
+** In state 49, looking ahead at UNIT, reducing production
+** expression -> simple_expression PT IDENT FLECHEG expression
+** is permitted because of the following sub-derivation:
+
+expression simple_expression // lookahead token appears because simple_expression can begin with UNIT
+simple_expression PT IDENT FLECHEG expression . 
+
+** In state 49, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expression PT IDENT FLECHEG expression 
+                                   expression simple_expression 
+                                              . UNIT 
